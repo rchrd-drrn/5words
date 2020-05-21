@@ -42,12 +42,8 @@ acontecimiento - evénement
 llevar - apporter
 una subasta - une enchère
 todavia - cependant
-aun - encore
 entonces - ensuite
-por supuesto - bien sur
 la cebolla - l'oignon
-entregar - livrer
-culpar - accuser
 una campana - une cloche
 siquiera - meme pas
 la hacienda - l'exploitation agricole
