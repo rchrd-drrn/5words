@@ -1,4 +1,5 @@
 import random
+import pygame
 from tkinter import *
 
 """---------- definition_dico() ----------"""
@@ -24,7 +25,36 @@ def definition_dico() :
 
     return dico
 
-"""----------  ----------"""
+"""---------- words_on_window ----------"""
+def words_on_window(list):
+
+    retour_ligne = 0
+
+
+
+    pygame.init()
+    window_resolution = (640, 480)
+    black = (0, 0, 0)
+    white = (255, 255, 255)
+
+    pygame.display.set_caption("Python #39")
+    windows_surface = pygame.display.set_mode(window_resolution)
+    windows_surface.fill(white)
+
+    arial_font = pygame.font.SysFont("arial", 30)
+
+    for i in list:
+        retour_ligne += 30
+        texte = str(i[0]) + " : " + str(i[1])
+        hello_text_surface = arial_font.render(texte, True, black)
+        windows_surface.blit(hello_text_surface, [10, retour_ligne])
+        pygame.display.flip()
+
+    launched = True
+    while launched:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                launched = False
 
 
 
@@ -87,8 +117,7 @@ def user_choice():
     elif int(res) == 1 :
         test()
     elif int(res) == 2 :
-        print(apprentissage())
-
+        words_on_window(apprentissage())
 
 """---------- MAIN ----------"""
 
